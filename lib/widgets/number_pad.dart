@@ -16,8 +16,6 @@ class NumberPad extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-
     return Column(
       children: [
         // Number buttons 1-9

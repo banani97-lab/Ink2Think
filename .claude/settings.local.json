@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(flutter doctor:*)",
+      "Bash(C:flutterbinflutter doctor)",
+      "Bash(cmd.exe /c \"C:\\\\Flutter\\\\flutter\\\\bin\\\\flutter doctor\")"
+    ]
+  }
+}
