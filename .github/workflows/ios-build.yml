@@ -22,6 +22,15 @@ jobs:
           channel: 'stable'
           cache: true
 
+      - name: Generate platform files
+        run: |
+          flutter create . --project-name ink2think --org com.ink2think --platforms=ios,android
+
+      - name: Add camera permissions (iOS)
+        run: |
+          /usr/libexec/PlistBuddy -c "Add :NSCameraUsageDescription string 'This app needs camera access to scan sudoku puzzles'" ios/Runner/Info.plist || \
+          /usr/libexec/PlistBuddy -c "Set :NSCameraUsageDescription 'This app needs camera access to scan sudoku puzzles'" ios/Runner/Info.plist
+
       - name: Install dependencies
         run: flutter pub get
 
